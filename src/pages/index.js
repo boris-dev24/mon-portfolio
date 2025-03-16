@@ -1,114 +1,118 @@
+import Link from "next/link";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isVisible, setIsVisible] = useState(false);
+  const [isSkillsVisible, setIsSkillsVisible] = useState(false);
+  const [typingText, setTypingText] = useState("");
+  const fullText = "Salut, je suis Boris Ngoko 👋";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 300);
+    setTimeout(() => setIsSkillsVisible(true), 1000);
+
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypingText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) clearInterval(interval);
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const images = [
+    "/images/cadrant.png",
+    "/images/cadre1.png",
+    "/images/cadre2.png",
+    "/images/monPortfolio.jpg",
+    "/images/Todolist.png",
+    "/images/ecopartage.jpg"
+  ];
+
+  const skills = [
+    { name: "HTML", icon: "🔥" },
+    { name: "CSS", icon: "🎨" },
+    { name: "JavaScript", icon: "⚡" },
+    { name: "React.js", icon: "⚛️" },
+    { name: "Next.js", icon: "🚀" },
+    { name: "Node.js", icon: "🌿" },
+    { name: "Tailwind CSS", icon: "💨" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "Git & GitHub", icon: "🐙" }
+  ];
+
+  return (
+    <div className="relative w-full min-h-screen bg-gradient-to-b from-blue-900 via-indigo-700 to-purple-700">
+      {/* Background full screen */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('/images/bur3.jpg')", height: "100vh", width: "100vw" }}
+      >
+        {/* Overlay pour améliorer la lisibilité du texte */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      </div>
+
+      {/* Contenu principal centré */}
+      <div className="relative flex flex-col items-center justify-center min-h-screen px-4 text-white">
+        <div className="w-full max-w-5xl flex flex-col md:flex-row items-center transition-all duration-1000 transform">
+          
+          {/* Image de profil */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+            <Image 
+              src="/images/profile.jpg" 
+              alt="Photo de profil de Boris Ngoko" 
+              width={200} 
+              height={200} 
+              className="rounded-full shadow-lg transform transition duration-500 hover:scale-110"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+
+          {/* Texte de présentation */}
+          <div className="w-full md:w-2/3 p-10 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg transform transition duration-1000 hover:scale-105">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-wide">
+              {typingText}
+              <span className="text-yellow-400">|</span>
+            </h1>
+            <p className="mt-4 text-lg leading-relaxed transition-opacity duration-1000 delay-500">
+              Développeur web passionné, avec un parcours atypique alliant électrotechnique et énergies renouvelables.  
+              Aujourd’hui, j’allie rigueur technique et créativité pour concevoir des solutions web performantes et intuitives.
+            </p>
+
+            <div className="mt-6">
+              <Link href="/projects" className="px-6 py-3 bg-yellow-500 text-white text-lg rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300 transform hover:scale-105 hover:shadow-xl">
+                Voir mes projets 🚀
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* 🌟 SECTION COMPÉTENCES 🌟 */}
+      <div className={`relative mt-16 w-full max-w-4xl transition-all duration-1000 transform ${isSkillsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Compétences Techniques</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {skills.map((skill, index) => (
+            <div key={index} className={`bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg shadow-md flex items-center space-x-3 transition duration-500 hover:scale-105 transform ${isSkillsVisible ? `opacity-100 translate-y-0 delay-${index * 200}` : "opacity-0 translate-y-10"}`}>
+              <span className="text-3xl">{skill.icon}</span>
+              <span className="font-semibold text-lg">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 🌟 SECTION IMAGES 🌟 */}
+      <div className="mt-16 w-full max-w-4xl">
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Quelques Réalisations</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {images.map((src, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <Image src={src} alt={`Projet ${index + 1}`} width={400} height={250} className="w-full h-auto object-cover" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

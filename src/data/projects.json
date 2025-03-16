@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "title": "Portfolio Next.js",
+      "description": "Un site web moderne pour présenter mes projets.",
+      "details": "Ce portfolio a été réalisé avec Next.js et Tailwind CSS. Il met en avant mes projets et compétences.",
+      "technologies": ["Next.js", "Tailwind CSS", "Vercel"],
+      "image": "/images/monPortfolio.jpg",
+      "slug": "portfolio-nextjs",
+      "demo": "https://mon-portfolio.vercel.app",
+      "github": "https://github.com/boris-dev24/mon-portfolio"
+    },
+    {
+      "id": 2,
+      "title": "Gestionnaire de tâches",
+      "description": "Une application React permettant d’organiser ses tâches.",
+      "details": "Une application React avec une gestion d’état via Context API et un stockage des tâches en local.",
+      "technologies": ["React", "Context API", "CSS Modules"],
+      "image": "/images/todolist.png",
+      "slug": "gestionnaire-taches",
+      "demo": "https://gestionnaire-taches.vercel.app",
+      "github": "https://github.com/ton-profil/todolist"
+    },
+    {
+      "id": 3,
+      "title": "EcoPartage",
+      "description": "EcoPartage est une plateforme web permettant aux utilisateurs de donner, échanger ou récupérer des objets de seconde main dans une démarche d'économie circulaire et de solidarité.",
+      "details": "Une application React avec une gestion et un stockage des Bases de Données avec FireBase .",
+      "technologies": ["React", "Firebase", "CSS Modules", "javaScript", "web3form"],
+      "image": "/images/ecopartage.jpg",
+      "slug": "ecopartage",
+      "demo": "https://ecopartage.vercel.app",
+      "github": "https://github.com/boris-dev24/ecopartage.git"
+      
+    }
+  ]
+  
