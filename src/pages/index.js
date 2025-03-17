@@ -23,11 +23,8 @@ export default function Home() {
   }, []);
 
   const images = [
-    { image: '/images/cadrant.png', Title: 'Cadrant'},
-    { image: '/images/cadre1.png', Title: 'Cadre1'},
     { image: '/images/nextjs-dashboard.jpg', Title: 'dashboard'},
     { image: '/images/monPortfolio.jpg', Title: 'Monportfolio'},
-    { image: '/images/Todolist.png', Title: 'Todolist'},
     { image: '/images/ecopartage.jpg', Title: 'Ecopartage'}
   ];
 

@@ -7,22 +7,11 @@
       "technologies": ["Next.js", "Tailwind CSS", "Vercel"],
       "image": "/images/monPortfolio.jpg",
       "slug": "portfolio-nextjs",
-      "demo": "https://mon-portfolio.vercel.app",
+      "demo": "https://mon-portfolio-nu.vercel.app/",
       "github": "https://github.com/boris-dev24/mon-portfolio"
     },
     {
       "id": 2,
-      "title": "Gestionnaire de tâches",
-      "description": "Une application React permettant d’organiser ses tâches.",
-      "details": "Une application React avec une gestion d’état via Context API et un stockage des tâches en local.",
-      "technologies": ["React", "Context API", "CSS Modules"],
-      "image": "/images/todolist.png",
-      "slug": "gestionnaire-taches",
-      "demo": "https://gestionnaire-taches.vercel.app",
-      "github": "https://github.com/boris-dev24/todolist.git"
-    },
-    {
-      "id": 3,
       "title": "EcoPartage",
       "description": "EcoPartage est une plateforme web permettant aux utilisateurs de donner, échanger ou récupérer des objets de seconde main dans une démarche d'économie circulaire et de solidarité.",
       "details": "Une application React avec une gestion et un stockage des Bases de Données avec FireBase .",
@@ -34,7 +23,7 @@
       
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "nextjs-dashboard",
       "description": "nextjs-dashboard est un modèle de tableau de bord développé avec Next.js.",
       "details": "un framework React populaire. Ce modèle sert de point de départ pour la création d'applications web administratives robustes.",
