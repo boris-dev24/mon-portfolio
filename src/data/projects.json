@@ -19,7 +19,7 @@
       "image": "/images/todolist.png",
       "slug": "gestionnaire-taches",
       "demo": "https://gestionnaire-taches.vercel.app",
-      "github": "https://github.com/ton-profil/todolist"
+      "github": "https://github.com/boris-dev24/todolist.git"
     },
     {
       "id": 3,
@@ -31,6 +31,18 @@
       "slug": "ecopartage",
       "demo": "https://ecopartage.vercel.app",
       "github": "https://github.com/boris-dev24/ecopartage.git"
+      
+    },
+    {
+      "id": 4,
+      "title": "nextjs-dashboard",
+      "description": "nextjs-dashboard est un modèle de tableau de bord développé avec Next.js.",
+      "details": "un framework React populaire. Ce modèle sert de point de départ pour la création d'applications web administratives robustes.",
+      "technologies": ["Next.js", "TypeScript", "React Boostrap"],
+      "image": "/images/nextjs-dashboard.jpg",
+      "slug": "nextjs-dashboard",
+      "demo": "https://nextjs-dashboard-8ivc.vercel.app/",
+      "github": "https://github.com/boris-dev24/nextjs-dashboard.git"
       
     }
   ]

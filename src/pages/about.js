@@ -29,7 +29,7 @@ export default function About() {
       {/* Photo de profil avec animation */}
       <div className={`mt-8 flex justify-center transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}>
         <Image
-          src="/images/profile.jpg"
+          src="/images/profile.JPG"
           alt="Photo de profil"
           width={200}
           height={200}

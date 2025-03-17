@@ -14,7 +14,7 @@ export default function Projects() {
     <div className="container mx-auto px-6 py-12 relative w-full min-h-screen bg-gradient-to-b from-black to-blue-900 bg-opacity-80">
       {/* Titre principal */}
       <h1 className={`text-4xl md:text-5xl font-extrabold text-white text-center transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-        Mes <span className="text-blue-500">Projets</span> 🚀
+        Mes <span className="text-blue-500">Projets</span> 
       </h1>
       <p className={`mt-4 text-lg text-white text-center max-w-2xl mx-auto transition-opacity duration-1000 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
         Voici quelques projets sur lesquels j’ai travaillé récemment. Cliquez sur un projet pour en savoir plus !

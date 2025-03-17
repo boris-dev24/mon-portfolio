@@ -23,12 +23,12 @@ export default function Home() {
   }, []);
 
   const images = [
-    "/images/cadrant.png",
-    "/images/cadre1.png",
-    "/images/cadre2.png",
-    "/images/monPortfolio.jpg",
-    "/images/Todolist.png",
-    "/images/ecopartage.jpg"
+    { image: '/images/cadrant.png', Title: 'Cadrant'},
+    { image: '/images/cadre1.png', Title: 'Cadre1'},
+    { image: '/images/nextjs-dashboard.jpg', Title: 'dashboard'},
+    { image: '/images/monPortfolio.jpg', Title: 'Monportfolio'},
+    { image: '/images/Todolist.png', Title: 'Todolist'},
+    { image: '/images/ecopartage.jpg', Title: 'Ecopartage'}
   ];
 
   const skills = [
@@ -61,7 +61,7 @@ export default function Home() {
           {/* Image de profil */}
           <div className="w-full md:w-1/3 flex justify-center md:justify-start">
             <Image 
-              src="/images/profile.jpg" 
+              src="/images/profile.JPG" 
               alt="Photo de profil de Boris Ngoko" 
               width={200} 
               height={200} 
@@ -82,7 +82,7 @@ export default function Home() {
 
             <div className="mt-6">
               <Link href="/projects" className="px-6 py-3 bg-yellow-500 text-white text-lg rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300 transform hover:scale-105 hover:shadow-xl">
-                Voir mes projets 🚀
+                Voir mes projets 
               </Link>
             </div>
           </div>
@@ -108,7 +108,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {images.map((src, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-              <Image src={src} alt={`Projet ${index + 1}`} width={400} height={250} className="w-full h-auto object-cover" />
+              <Image src={src.image} alt={`Projet ${index + 1}`} width={400} height={250} className="w-full h-auto object-cover" />
+              <div className="text-center mt-2 text-white">{src.Title}</div>
             </div>
           ))}
         </div>
