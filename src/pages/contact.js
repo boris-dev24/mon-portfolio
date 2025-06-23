@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <div className="container mx-auto px-6 py-12 max-w-lg bg-gray-900 text-white min-h-screen">
       <h1 className="text-4xl font-extrabold text-blue-400 text-center animate__animated animate__fadeIn">
-        📩 Me Contacter
+         Me Contacter
       </h1>
       <p className="mt-4 text-lg text-gray-400 text-center">
         Une question ? Un projet ? N’hésitez pas à me contacter via ce formulaire.

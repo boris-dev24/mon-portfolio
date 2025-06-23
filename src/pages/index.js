@@ -6,7 +6,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [typingText, setTypingText] = useState("");
-  const fullText = "Salut, je suis Boris Ngoko 👋";
+  const fullText = "Salut, je suis Boris Ngoko ";
 
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 300);
@@ -29,15 +29,15 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: "HTML", icon: "🔥" },
-    { name: "CSS", icon: "🎨" },
-    { name: "JavaScript", icon: "⚡" },
-    { name: "React.js", icon: "⚛️" },
-    { name: "Next.js", icon: "🚀" },
-    { name: "Node.js", icon: "🌿" },
-    { name: "Tailwind CSS", icon: "💨" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Git & GitHub", icon: "🐙" }
+    { name: "HTML", icon: "" },
+    { name: "CSS", icon: "" },
+    { name: "JavaScript", icon: "" },
+    { name: "React.js", icon: "" },
+    { name: "Next.js", icon: "" },
+    { name: "Node.js", icon: "" },
+    { name: "Tailwind CSS", icon: "" },
+    { name: "MongoDB", icon: "" },
+    { name: "Git & GitHub", icon: "" }
   ];
 
   return (

@@ -17,7 +17,7 @@ export default function About() {
     <div className="container mx-auto px-6 py-12 text-center bg-gradient-to-r from-blue-900 via-indigo-700 to-black">
       {/* Titre principal */}
       <h1 className={`text-4xl md:text-5xl font-extrabold text-white tracking-wide transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-        À propos de <span className="text-blue-400">Moi</span> 💡
+        À propos de <span className="text-blue-400">Moi</span> 
       </h1>
 
       {/* Paragraphe introductif */}
@@ -42,19 +42,19 @@ export default function About() {
         <h2 className="text-2xl font-semibold text-white text-center">Expérience & Parcours</h2>
         <div className="mt-6 space-y-6">
           <div className="bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-300 hover:bg-gray-700">
-            <h3 className="text-lg font-bold text-blue-400">🔧 Électrotechnique & Énergies Renouvelables</h3>
+            <h3 className="text-lg font-bold text-blue-400"> Électrotechnique & Énergies Renouvelables</h3>
             <p className="text-white">
               J’ai débuté dans l’installation électrique domestique et industrielle, ainsi que dans l’étude et l’installation de systèmes photovoltaïques.
             </p>
           </div>
           <div className="bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-300 hover:bg-gray-700">
-            <h3 className="text-lg font-bold text-blue-400">💻 Transition vers le Développement Web</h3>
+            <h3 className="text-lg font-bold text-blue-400"> Transition vers le Développement Web</h3>
             <p className="text-white">
               En 2025, j’ai fait le choix de me réorienter vers le développement web, alliant créativité et logique pour créer des solutions interactives.
             </p>
           </div>
           <div className="bg-gray-800 shadow-lg p-6 rounded-lg transition-all duration-300 hover:bg-gray-700">
-            <h3 className="text-lg font-bold text-blue-400">🚀 Développement Full Stack</h3>
+            <h3 className="text-lg font-bold text-blue-400"> Développement Full Stack</h3>
             <p className="text-white">
               Aujourd’hui, je travaille principalement avec **Next.js, React, Node.js, et Laravel** pour concevoir des applications modernes et performantes.
             </p>
@@ -81,7 +81,7 @@ export default function About() {
           download
           className="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-xl rounded-lg shadow-lg hover:bg-blue-700 transform transition duration-300 hover:scale-105"
         >
-          📄 Télécharger mon CV
+           Télécharger mon CV
         </a>
       </div>
     </div>

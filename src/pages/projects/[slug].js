@@ -60,7 +60,7 @@ export default function ProjectDetail() {
           rel="noopener noreferrer"
           className="bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition duration-300 transform hover:scale-105"
         >
-          🌍 Voir la Démo
+           Voir la Démo
         </a>
         <a
           href={project.github}
@@ -68,7 +68,7 @@ export default function ProjectDetail() {
           rel="noopener noreferrer"
           className="bg-gray-800 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-900 transition duration-300 transform hover:scale-105"
         >
-          💻 Code Source
+           Code Source
         </a>
       </div>
     </div>
